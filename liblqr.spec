@@ -5,12 +5,13 @@
 Summary:	LiquidRescale seam-carving library
 Name:		liblqr
 Version:	0.1.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		System/Libraries
 License:	GPLv2+
 URL:		http://liquidrescale.wikidot.com/
 Source0:	http://liblqr.wikidot.com/local--files/en:download-page/%{name}-1-%{version}-1.tar.gz
 Patch0:		liblqr-docbook_fixes.diff
+Patch1:		liblqr-linkage_fix.diff
 BuildRequires:	glib
 BuildRequires:	gimp-devel >= 2.2.13
 BuildRequires:	docbook-style-xsl
@@ -48,8 +49,10 @@ This package contains the static LiquidRescale library and its header files.
 
 %setup -q -n %{name}-1-%{version}
 %patch0 -p1
+%patch1 -p0
 
 %build
+autoreconf -fis
 
 %configure2_5x
 
@@ -91,4 +94,3 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %{_libdir}/*.la
 %{_libdir}/pkgconfig/*.pc
-
