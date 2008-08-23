@@ -5,19 +5,17 @@
 Summary:	LiquidRescale seam-carving library
 Name:		liblqr
 Version:	0.1.0
-Release:	%mkrel 3
+Release:	%mkrel 4
 Group:		System/Libraries
-License:	GPLv2+
+#gw the lib is LGPL, the examples GPL
+License:        LGPLv3 and GPLv3
 URL:		http://liquidrescale.wikidot.com/
-Source0:	http://liblqr.wikidot.com/local--files/en:download-page/%{name}-1-%{version}-1.tar.gz
+Source0:	http://liblqr.wikidot.com/local--files/en:download-page/%{name}-1-%{version}-4.tar.gz
 Patch0:		liblqr-docbook_fixes.diff
-Patch1:		liblqr-linkage_fix.diff
-BuildRequires:	glib
-BuildRequires:	gimp-devel >= 2.2.13
+BuildRequires:	glib2-devel
 BuildRequires:	docbook-style-xsl
 BuildRequires:	docbook-dtd45-xml
 BuildRequires:	libxslt-proc
-Requires:	gimp >= 2.2.13
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -49,13 +47,9 @@ This package contains the static LiquidRescale library and its header files.
 
 %setup -q -n %{name}-1-%{version}
 %patch0 -p1
-%patch1 -p0
 
 %build
-autoreconf -fis
-
 %configure2_5x
-
 %make
 
 # make the html docs
@@ -82,7 +76,7 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog README
-%{_libdir}/*.so.*
+%{_libdir}/liblqr-1.so.%{major}*
 
 %files -n %{develname}
 %defattr(-,root,root)
