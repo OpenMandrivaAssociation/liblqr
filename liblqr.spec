@@ -1,16 +1,17 @@
+%define api 1
 %define	major 0
-%define libname %mklibname lqr %{major}
+%define libname %mklibname lqr %{api} %{major}
 %define develname %mklibname lqr -d
 
 Summary:	LiquidRescale seam-carving library
 Name:		liblqr
-Version:	0.1.0
-Release:	%mkrel 4
+Version:	0.3.0
+Release:	%mkrel 1
 Group:		System/Libraries
 #gw the lib is LGPL, the examples GPL
 License:        LGPLv3 and GPLv3
 URL:		http://liquidrescale.wikidot.com/
-Source0:	http://liblqr.wikidot.com/local--files/en:download-page/%{name}-1-%{version}-4.tar.gz
+Source0:	http://liblqr.wikidot.com/local--files/en:download-page/%{name}-%{api}-%{version}.tar.bz2
 Patch0:		liblqr-docbook_fixes.diff
 BuildRequires:	glib2-devel
 BuildRequires:	docbook-style-xsl
@@ -25,6 +26,7 @@ non-uniform resizing of images by the seam-carving technique.
 %package -n	%{libname}
 Summary:	LiquidRescale seam-carving library
 Group:		System/Libraries
+Obsoletes:	%{_lib}lqr0 < %{version}-%{release}
 
 %description -n	%{libname}
 The Liquid Rescale (lqr) library provides a C/C++ API for performing
@@ -76,7 +78,7 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog README
-%{_libdir}/liblqr-1.so.%{major}*
+%{_libdir}/liblqr-%{api}.so.%{major}*
 
 %files -n %{develname}
 %defattr(-,root,root)
