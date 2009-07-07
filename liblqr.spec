@@ -1,10 +1,11 @@
 %define	major 0
 %define libname %mklibname lqr %{major}
+%define libname_old %mklibname lqr1_ 0
 %define develname %mklibname lqr -d
 
 Name: liblqr
 Version: 0.4.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary:LiquidRescale seam-carving library
 Group: System/Libraries
 License: LGPLv3 and GPLv3
@@ -24,6 +25,7 @@ non-uniform resizing of images by the seam-carving technique.
 %package -n	%{libname}
 Summary:	LiquidRescale seam-carving library
 Group:		System/Libraries
+Obsoletes:  %{libname_old}
 
 %description -n	%{libname}
 The Liquid Rescale (lqr) library provides a C/C++ API for performing
@@ -60,14 +62,6 @@ popd
 rm -rf %{buildroot}
 
 %makeinstall_std
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %clean
 rm -rf %{buildroot}
