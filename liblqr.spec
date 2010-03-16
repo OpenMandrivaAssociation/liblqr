@@ -5,7 +5,7 @@
 
 Name: liblqr
 Version: 0.4.1
-Release: %mkrel 2
+Release: %mkrel 3
 Summary:LiquidRescale seam-carving library
 Group: System/Libraries
 License: LGPLv3 and GPLv3
