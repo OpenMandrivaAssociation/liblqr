@@ -1,0 +1,19 @@
+--- liblqr-1-0.4.1/docs/liblqr_manual.docbook	2009-05-11 19:40:44.000000000 -0400
++++ liblqr-1-0.4.1/docs/liblqr_manual.docbook.new	2009-07-07 13:01:24.000000000 -0400
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+-<!DOCTYPE book PUBLIC "-//OASIS//DTD DOcBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd" [
++<!DOCTYPE book PUBLIC "-//OASIS//DTD DOcBook XML V4.5//EN" "/usr/share/sgml/docbook/schema/dtd/4.5/docbookx.dtd" [
+     <!ENTITY lqr "Liquid Rescale">
+     <!ENTITY lqrl "&lqr; library">
+     <!ENTITY carv_obj "<classname>LqrCarver</classname>">
+--- liblqr-1-0.4.1/docs/lqr_style.xsl	2009-03-28 17:53:23.000000000 -0400
++++ liblqr-1-0.4.1/docs/lqr_style.xsl.new	2009-07-07 13:01:53.000000000 -0400
+@@ -1,6 +1,6 @@
+ <?xml version="1.0"?>
+ <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+-	<xsl:import href="/usr/share/xml/docbook/stylesheet/nwalsh/html/chunk.xsl"/>
++	<xsl:import href="/usr/share/sgml/docbook/xsl-stylesheets/html/chunk.xsl"/>
+ 	<!--<xsl:import href="/usr/share/sgml/docbook/stylesheet/xsl/nwalsh/html/docbook.xsl"/>-->
+ 	<xsl:param name="use.id.as.filename" select="1"/>
+ 	<xsl:param name="funcsynopsis.style">ansi</xsl:param>
