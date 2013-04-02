@@ -1,12 +1,12 @@
 %define major 0
-%define libname %mklibname lqr %{major}
-%define develname %mklibname lqr -d
+%define libname %mklibname lqr1 %{major}
+%define develname %mklibname lqr1 -d
 
 %define libname_old %mklibname lqr1_ 0
 
 Name:		liblqr
 Version:	0.4.1
-Release:	8
+Release:	9
 Summary:	LiquidRescale seam-carving library
 Group:		System/Libraries
 License:	LGPLv3 and GPLv3
