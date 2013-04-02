@@ -13,6 +13,7 @@ License:	LGPLv3 and GPLv3
 URL:		http://liblqr.wikidot.com/
 Source0:	%{name}-1-%{version}.tar.bz2
 Patch0:		liblqr-docbook_fixes.diff
+Patch1:		liblqr-aarch64.patch
 
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	docbook-style-xsl
