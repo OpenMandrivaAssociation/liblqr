@@ -39,7 +39,8 @@ Provides:	%{name}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
 
 %description -n	%{devname}
-This package contains the development LiquidRescale library and its header files.
+This package contains the development LiquidRescale library and its header 
+files.
 
 %prep
 %setup -qn %{name}-%{api}-%{version}
