@@ -1,3 +1,4 @@
+%define _disable_rebuild_configure 1
 %define api	1
 %define major	0
 %define libname %mklibname lqr %{api} %{major}
@@ -46,7 +47,7 @@ files.
 %apply_patches
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 
 %make
