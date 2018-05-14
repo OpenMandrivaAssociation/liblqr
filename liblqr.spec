@@ -7,10 +7,11 @@
 Summary:	LiquidRescale seam-carving library
 Name:		liblqr
 Version:	0.4.2
-Release:	5
+Release:	6
 Group:		System/Libraries
 License:	LGPLv3 and GPLv3
 Url:		http://liblqr.wikidot.com/
+# https://github.com/carlobaldassi/liblqr
 Source0:	%{name}-1-%{version}.tar.bz2
 Patch0:		liblqr-docbook_fixes.diff
 
