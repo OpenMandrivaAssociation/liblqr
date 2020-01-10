@@ -45,7 +45,7 @@ files.
 
 %prep
 %setup -qn %{name}-%{api}-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
