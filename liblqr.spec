@@ -15,6 +15,11 @@ Url:		https://liblqr.wikidot.com/
 Source0:	%{name}-1-%{version}.tar.bz2
 Patch0:		liblqr-docbook_fixes.diff
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	docbook-style-xsl
 BuildRequires:	docbook-dtd45-xml
 BuildRequires:	xsltproc
